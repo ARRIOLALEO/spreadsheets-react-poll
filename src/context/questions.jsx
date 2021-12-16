@@ -59,7 +59,11 @@ const QuestionProvider = ({ children }) => {
       value,
       responses.slice(position + 1, responses.length - 1),
     ]);
-    SetPostion(position + 1);
+    if (position === 19 && value === "no") {
+      SetPostion(position + 2);
+    } else {
+      SetPostion(position + 1);
+    }
     console.log(responses);
   }
 

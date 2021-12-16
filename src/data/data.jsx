@@ -148,6 +148,53 @@ export const Data = {
     questionType: 3,
   },
   16: {
+    id: "16",
+    title: "CUAL DE ESTOS PRODUCTOS PARA EL CUIDADO DEL CABELLO AMAS MAS",
+    images: [
+      { url: "16/1.png", description: "MASCARILLA TRATAMIENTO" },
+      { url: "16/2.png", description: "LEAVE IN " },
+      { url: "16/3.png", description: "SERUM" },
+      { url: "16/4.png", description: "AMPOLLETAS" },
+      { url: "16/5.png", description: "SHAMPOO EN SECO" },
+    ],
+    bg: "bgs/f7.jpg",
+    questionType: 2,
+  },
+  17: {
+    id: "17",
+    title: "18 CUAL DESCRIBE MEJOR TU CABELLO",
+    options: ["Necesita Volumen", "muy colocho", "seco y maltratado", "frizz", "puntas abiertas"],
+    bg: "bgs/f7.jpg",
+    questionType: 3,
+  },
+  18: {
+    id: "18",
+    title: "QUE TAMAÑO TIENES TU CABELLO",
+    images: [
+      { url: "18/1.png", description: "MUY CORTO" },
+      { url: "18/2.png", description: "CORTO" },
+      { url: "18/3.png", description: "MEDIANO" },
+      { url: "18/4.png", description: "LARGO" },
+      { url: "18/5.png", description: "MUY LARGO" },
+    ],
+    bg: "bgs/f7.jpg",
+    questionType: 2,
+  },
+  19: {
+    id: "19",
+    title: "Eres alergica a algun producto o marca ",
+    options: ["si", "no"],
+    bg: "bgs/f7.jpg",
+    questionType: 3,
+  },
+  20: {
+    id: "20",
+    title: "Eres alergica a algun producto o marca ",
+    placeholder: "escribe tu respuesta aqui",
+    questionType: 1,
+    bg: "bgs/f3.jpg",
+  },
+  88: {
     questionType: 25,
   },
 };

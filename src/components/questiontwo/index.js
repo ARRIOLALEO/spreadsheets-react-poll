@@ -14,7 +14,7 @@ const QuestionTwo = (props) => {
       <h1 className="questionTwoTitle">{title}</h1>
       <AllQuestions.Consumer>
         {(context) => (
-          <section className="flex max-w-min">
+          <section className="flex">
             {images.map((img) => (
               <section className="btnOptions">
                 <button

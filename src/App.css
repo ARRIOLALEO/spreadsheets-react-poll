@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+#question {
+  transition: transform 0.5s linear;
+}
