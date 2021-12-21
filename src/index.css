@@ -2,45 +2,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: grid;
+  height: 100vh;
+  place-items: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
-
-#questions {
+.sectionQuestion {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  min-width: 800px;
   align-items: center;
-  margin-top: 20%;
+  align-content: center;
 }
 .questionTitle {
-  font-size: 2.8rem;
+  font-size: 1.3rem;
   margin-top: -0.25rem;
   margin-left: -1.5rem;
-  max-width: 80%;
   text-align: center;
+  text-transform: uppercase;
+  font-weight: 200;
 }
 .questionTwoTitle {
-  margin-top: -6rem;
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
-  max-width: 80%;
+  font-size: 1.3rem;
+  margin-top: -0.25rem;
+  margin-left: -1.5rem;
   text-align: center;
+  text-transform: uppercase;
+  font-weight: 200;
 }
 .btnOptions {
   min-height: 12rem;
   padding: 1rem 0.2rem;
-  border: solid 2px white;
+  border: solid 0.5px white;
   border-radius: 9px;
   max-width: 12rem;
+  min-width: 7rem;
   margin-left: 0.5rem;
 }
 .btnOptionsText {
@@ -48,7 +59,7 @@ code {
   width: 100%;
   text-align: center;
   padding: 1rem 0.2rem;
-  border: solid 2px white;
+  border: solid 0.5px white;
   border-radius: 9px;
   margin-left: 0.5rem;
 }
@@ -62,27 +73,93 @@ code {
   border-bottom: solid 2px white;
 }
 .btnTitle {
-  font-size: 1.5rem;
   align-text: center;
   min-width: 100%;
   margin-top: 0.5rem;
 }
 input[type="text"] {
-  width: 44%;
+  width: 80%;
   border-radius: 49px;
   border-style: solid;
-  border-width: 2px;
-  border-color: black;
+  text-align: center;
+  font-weight: 100;
 }
 ::placeholder {
   font-size: 1.5rem;
 }
 .leftArrow,
 .rightArrow {
-  max-width: 7%;
+  max-width: 35%;
 }
 #btns {
   display: flex;
-  margin-left: 26rem;
-  margin-top: 1rem;
+  align-items: center;
+}
+.btnSectionLeft {
+  display: flex;
+  overflow: hidden;
+  clear: both;
+}
+.btnSectionLeft img {
+  max-width: 35%;
+}
+.btnSectionRight {
+}
+.btnSectionRight img {
+  max-width: 35%;
+}
+button {
+  font-weight: 100;
+}
+span {
+  text-align: center;
+  font-weight: 200;
+}
+.arrow-left {
+  width: 0px;
+  height: 0px;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid #111111;
+}
+.arrow-right {
+  width: 0px;
+  height: 0px;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #111111;
+}
+.arrow1left,
+.arrow1right,
+.arrow3right,
+.arrow3left {
+  align-self: flex-end;
+}
+
+.arrow2right,
+.arrow2left {
+  align-self: flex-center;
+}
+
+.savebtn {
+  padding: 1rem 5rem;
+  background: linear-gradient(to right, #6157ff, #4d4470);
+  border-radius: 15px;
+  color: white;
+  margin: 0 15px;
+}
+
+@media (max-width: 550px) {
+  .sectionQuestion {
+    min-width: 350px;
+  }
+  .flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .btnTitle {
+    font-weight: 400;
+    font-size: 10px;
+    max-width: 100px;
+  }
 }

@@ -3,8 +3,7 @@ import { AllQuestions } from "../context/questions.jsx";
 import TextImput from "../components/questionone/index.jsx";
 import QuestionTwo from "../components/questiontwo/index.js";
 import QuestionsTree from "../components/questiontree/index.jsx";
-import left from "../images/arrows/left.png";
-import right from "../images/arrows/right.png";
+import QuestionFour from "../components/questionfour/index.jsx";
 import SaveForm from "../components/endform/index.jsx";
 const Questions = (props) => {
   return (
@@ -14,38 +13,44 @@ const Questions = (props) => {
           {(context) =>
             context.question ? (
               <>
-                {(() => {
-                  if (context.question.questionType === 1) {
-                    return (
-                      <TextImput
-                        id={context.question.id}
-                        title={context.question.title}
-                        placeholder={context.question.placeholder}
-                        bg={context.question.bg}
-                      ></TextImput>
-                    );
-                  } else if (context.question.questionType === 2) {
-                    return (
-                      <QuestionTwo
-                        images={context.question.images}
-                        title={context.question.title}
-                        bg={context.question.bg}
-                      />
-                    );
-                  } else if (context.question.questionType === 3) {
-                    return <QuestionsTree data={context.question} />;
-                  } else {
-                    return <SaveForm />;
-                  }
-                })()}
-                <section id="btns">
-                  <button onClick={() => context.previus()}>
-                    <img className="leftArrow" src={left} alt="left" />
-                  </button>
-                  <button className="btnEnd" onClick={() => context.next()}>
-                    {" "}
-                    <img src={right} className="rightArrow" alt="right" />{" "}
-                  </button>
+                <section id="btns" className="content-between">
+                  <div
+                    class={`arrow${context.question.questionType}left arrow-left`}
+                    role="button"
+                    onClick={() => context.previus()}
+                  ></div>
+
+                  {(() => {
+                    if (context.question.questionType === 1) {
+                      return (
+                        <TextImput
+                          id={context.question.id}
+                          title={context.question.title}
+                          placeholder={context.question.placeholder}
+                          bg={context.question.bg}
+                        ></TextImput>
+                      );
+                    } else if (context.question.questionType === 2) {
+                      return (
+                        <QuestionTwo
+                          images={context.question.images}
+                          title={context.question.title}
+                          bg={context.question.bg}
+                        />
+                      );
+                    } else if (context.question.questionType === 3) {
+                      return <QuestionsTree data={context.question} />;
+                    } else if (context.question.questionType === 4) {
+                      return <QuestionFour data={context.question} />;
+                    } else {
+                      return <SaveForm />;
+                    }
+                  })()}
+                  <div
+                    className={`arrow${context.question.questionType}right arrow-right`}
+                    role="button"
+                    onClick={() => context.next()}
+                  ></div>
                 </section>
               </>
             ) : (

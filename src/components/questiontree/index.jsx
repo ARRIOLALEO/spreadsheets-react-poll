@@ -2,14 +2,11 @@ import React from "react";
 import { AllQuestions } from "../../context/questions.jsx";
 
 const QuestionTree = (props) => {
-  const { id, title, options, bg } = props.data;
+  const { title, options, bg } = props.data;
   const url = `./images/${bg}`;
   document.body.style.backgroundImage = `url(${url})`;
-  function saveHandler(save, data) {
-    save(data);
-  }
   return (
-    <>
+    <section className="sectionQuestion">
       <AllQuestions.Consumer>
         {(context) => (
           <>
@@ -27,7 +24,7 @@ const QuestionTree = (props) => {
           </>
         )}
       </AllQuestions.Consumer>
-    </>
+    </section>
   );
 };
 

@@ -5,7 +5,11 @@ const SaveForm = () => {
   return (
     <>
       <AllQuestions.Consumer>
-        {(context) => <button onClick={() => context.storeFile()}>SAVE DATA</button>}
+        {(context) => (
+          <div className="savebtn" role="button" onClick={() => context.storeFile()}>
+            Guardar
+          </div>
+        )}
       </AllQuestions.Consumer>
     </>
   );

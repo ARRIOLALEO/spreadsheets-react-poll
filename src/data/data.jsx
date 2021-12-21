@@ -109,7 +109,6 @@ export const Data = {
   11: {
     id: "11",
     title: "Usas Maquillaje",
-    questionType: 1,
     options: ["si tengo", "no tengo"],
     bg: "bgs/f6.png",
     questionType: 3,
@@ -193,6 +192,142 @@ export const Data = {
     placeholder: "escribe tu respuesta aqui",
     questionType: 1,
     bg: "bgs/f3.jpg",
+  },
+  21: {
+    id: "21",
+    title: "DONDE COMPRAS MAQUILLAJE",
+    images: [
+      { url: "19/1.png", description: "SIMAN" },
+      { url: "19/2.png", description: "MAC" },
+      { url: "19/3.png", description: "SEARS" },
+      { url: "19/4.png", description: "REPUBLIC COSMETICA" },
+      { url: "19/5.png", description: "SÚPER MERCADO" },
+      { url: "19/6.png", description: "TIENDA EN LINEA USA" },
+      { url: "19/7.png", description: "AMAZON / EBAY" },
+      { url: "19/8.png", description: "TIENDA EN LINEA ES" },
+    ],
+
+    bg: "bgs/f6.png",
+    questionType: 2,
+  },
+  22: {
+    id: "22",
+    title: "Cuale tienda online estadounidense ",
+    placeholder: "escribe tu respuesta aqui",
+    questionType: 1,
+    bg: "bgs/f3.jpg",
+  },
+  23: {
+    id: "23",
+    title: "cual tienda online Nacional ",
+    placeholder: "escribe tu respuesta aqui",
+    questionType: 1,
+    bg: "bgs/f3.jpg",
+  },
+  24: {
+    id: "24",
+    title: "Hidatante de dia ",
+    options: ["no uso", "algunas veces ", "muy seguido"],
+    description:
+      "Consigue aportat los nutrientes y el agua que la pien necesita al mismo tiempo que la protege de los radicales externos",
+    imagenDescription: "24/1.png",
+    bg: "bgs/f3.jpg",
+    questionType: 4,
+  },
+  25: {
+    id: "25",
+    title: "Marcarilla de papel ",
+    options: ["no uso", "algunas veces ", "muy seguido"],
+    description:
+      "tienen como objetivo la hidratacion superficial y la relajacion de la piel sin la necesidad de exfoliar ni realizar ningun tratamiento invasivo en lapiel del rostro",
+    imagenDescription: "25/1.png",
+    bg: "bgs/f3.jpg",
+    questionType: 4,
+  },
+
+  26: {
+    id: "26",
+    title: "marcaria de crema ",
+    options: ["no uso", "algunas veces ", "muy seguido"],
+    description: "",
+    imagenDescription: "26/1.png",
+    bg: "bgs/f3.jpg",
+    questionType: 4,
+  },
+
+  27: {
+    id: "27",
+    title: "Exfoliante",
+    options: ["no uso", "algunas veces ", "muy seguido"],
+    description:
+      "Get limpiador cuya formula cuenta con pequenas particulas que ayudan a retirar las celulas muertas de tu rostro",
+    imagenDescription: "27/1.png",
+    bg: "bgs/f3.jpg",
+    questionType: 4,
+  },
+
+  28: {
+    id: "28",
+    title: "Serum ",
+    options: ["no uso", "algunas veces ", "muy seguido"],
+    description:
+      "Tratamiento hidratante que se caracteriza por tener una alta concentracion de ingredientes activos y una textura liquida que favoreen una rapida y mas produnda absorcion",
+    imagenDescription: "28/1.png",
+    bg: "bgs/f9.jpg",
+    questionType: 4,
+  },
+
+  29: {
+    id: "29",
+    title: "Aceite para el el rostro ",
+    options: ["no uso", "algunas veces ", "muy seguido"],
+    description:
+      "es equilibrante para regular la secrecion de grasa pero que hidratan  nutren el rostro a vez",
+    imagenDescription: "29/1.png",
+    bg: "bgs/f9.jpg",
+    questionType: 4,
+  },
+
+  30: {
+    id: "30",
+    title: "Tonico",
+    options: ["no uso", "algunas veces ", "muy seguido"],
+    description:
+      "Se emplea despues de la limpieza facia, refresca, hidrata y restablece el pH de la piel",
+    imagenDescription: "30/1.png",
+    bg: "bgs/f8.jpg",
+    questionType: 4,
+  },
+
+  31: {
+    id: "31",
+    title: "Tratamiento para el contorno de los ojos",
+    options: ["no uso", "algunas veces ", "muy seguido"],
+    description:
+      "Consigue atenuar las arrugas y lineas de expresion del contorno de ojos acabar con bolsas y ojeras aportando frescura y juventud a la mirada",
+    imagenDescription: "31/1.png",
+    bg: "bgs/f8.jpg",
+    questionType: 4,
+  },
+
+  32: {
+    id: "32",
+    title: "Tratamiento para labios ",
+    options: ["no uso", "algunas veces ", "muy seguido"],
+    description: "",
+    imagenDescription: "32/1.png",
+    bg: "bgs/f8.jpg",
+    questionType: 4,
+  },
+
+  33: {
+    id: "33",
+    title: "Tratamiento para el acne ",
+    options: ["no uso", "algunas veces ", "muy seguido"],
+    description: "",
+    imagenDescription: "33/1.png",
+    bg: "bgs/f8.jpg",
+    questionType: 4,
   },
   88: {
     questionType: 25,

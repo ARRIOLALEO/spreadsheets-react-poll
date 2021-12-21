@@ -18,11 +18,11 @@ const QuestionProvider = ({ children }) => {
     if (sheet) {
       // creating an object with all values
       const newForm = {};
-      for (let key = 0; key < responses.length; key++) {
-        newForm[key] = responses[key];
+      for (let key = 0; key < responses.length - 1; key++) {
+        newForm[key] = Array.isArray(responses[key]) ? "" : responses[key];
       }
-      console.log(newForm);
       const larryRow = await sheet.addRow(newForm);
+      return larryRow;
     }
   }
 
@@ -61,6 +61,12 @@ const QuestionProvider = ({ children }) => {
     ]);
     if (position === 19 && value === "no") {
       SetPostion(position + 2);
+    } else if (position === 21 && value === "TIENDA EN LINEA USA") {
+      SetPostion(position + 1);
+    } else if (position === 21 && value === "TIENDA EN LINEA ES") {
+      SetPostion(position + 2);
+    } else if (position === 21) {
+      SetPostion(position + 3);
     } else {
       SetPostion(position + 1);
     }
@@ -84,6 +90,7 @@ const QuestionProvider = ({ children }) => {
     optionSelected,
     btnHandler,
     storeFile,
+    SetOptionSelected,
     max_questions,
   };
   return <AllQuestions.Provider value={optionQuestions}>{children}</AllQuestions.Provider>;
