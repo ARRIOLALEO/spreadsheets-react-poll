@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AllQuestions } from "../../context/questions.jsx";
 const TextImput = (props) => {
   const { id, title, placeholder, bg } = props;
+
   const url = `./images/${bg}`;
   document.body.style.backgroundImage = `url(${url})`;
   document.body.style.backgroundSize = "cover";
@@ -20,6 +21,7 @@ const TextImput = (props) => {
               onChange={(e) => context.updatevalue(e.target.value)}
               onKeyPress={(ev) => {
                 if (ev.key === "Enter") {
+                  ev.target.value = "";
                   context.next();
                 }
               }}

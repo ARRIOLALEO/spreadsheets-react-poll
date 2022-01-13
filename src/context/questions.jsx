@@ -39,8 +39,8 @@ const QuestionProvider = ({ children }) => {
 
   const save = () => {
     setResponses([...responses.slice(0, position), valueimput, responses.slice(position + 1)]);
-    SetPostion(position + 1);
     SetValueImput("");
+    SetPostion(position + 1);
   };
 
   const next = () => {
