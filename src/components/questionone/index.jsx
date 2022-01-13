@@ -6,6 +6,11 @@ const TextImput = (props) => {
   const url = `./images/${bg}`;
   document.body.style.backgroundImage = `url(${url})`;
   document.body.style.backgroundSize = "cover";
+
+  useEffect(() => {
+    document.getElementById(id).value = "";
+    console.log("mario");
+  }, [title]);
   return (
     <>
       <AllQuestions.Consumer>
