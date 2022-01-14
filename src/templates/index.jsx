@@ -4,6 +4,7 @@ import TextImput from "../components/questionone/index.jsx";
 import QuestionTwo from "../components/questiontwo/index.js";
 import QuestionsTree from "../components/questiontree/index.jsx";
 import QuestionFour from "../components/questionfour/index.jsx";
+import QuestionFive from "../components/questionfive/index.jsx";
 import SaveForm from "../components/endform/index.jsx";
 const Questions = (props) => {
   return (
@@ -42,6 +43,8 @@ const Questions = (props) => {
                       return <QuestionsTree data={context.question} />;
                     } else if (context.question.questionType === 4) {
                       return <QuestionFour data={context.question} />;
+                    } else if (context.question.questionType === 5) {
+                      return <QuestionFive data={context.question} />;
                     } else {
                       return <SaveForm />;
                     }

@@ -104,7 +104,7 @@ export const Data = {
       { url: "11/1.png", description: "no Tiene" },
     ],
     bg: "bgs/f5.jpg",
-    questionType: 2,
+    questionType: 5,
   },
   11: {
     id: "11",
@@ -157,7 +157,7 @@ export const Data = {
       { url: "16/5.png", description: "SHAMPOO EN SECO" },
     ],
     bg: "bgs/f7.jpg",
-    questionType: 2,
+    questionType: 5,
   },
   17: {
     id: "17",

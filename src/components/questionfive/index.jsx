@@ -3,32 +3,36 @@ import { AllQuestions } from "../../context/questions.jsx";
 
 const QuestionFive = (props) => {
   function hanlderBtn(save, value) {
-    save();
+    save(value);
   }
-  const { images, title, placeholder, bg } = props;
+  const { images, title, bg } = props.data;
   const url = `./images/${bg}`;
-  document.body.style.backgroundImage = `url(${url})`;
-  document.body.backgroundSize = "cover";
+  document.body.style.background = `url(${url})`;
+  document.body.style.backgroundSize = "cover";
   return (
     <section className="sectionQuestion">
       <h1 className="questionTwoTitle">{title}</h1>
       <AllQuestions.Consumer>
         {(context) => (
           <section className="flex">
-            {images.map((image) => (
+            {images.map((img) => (
               <section>
                 <button
-                  className=""
-                  onClick={() => hanlderBtn(context.hanlderBtn, img.description)}
+                  className="w-28 btnCenterItems no-border"
+                  onClick={() => hanlderBtn(context.btnHandler, img.description)}
                 >
                   <img
                     src={`./images/${img.url}`}
-                    className="h-24 w-24 flex items-center justify-center"
+                    className=" h-24 w-24 flex items-center justify-center"
                     alt={img.description}
                   />
                 </button>
-                <button onClick={() => hanlderBtn(context.hanlderBtn, img.description)}>
-                  {img.description}
+                <button
+                  className="btnOptionsText"
+                  onClick={() => hanlderBtn(context.btnHandler, img.description)}
+                >
+                  {" "}
+                  {img.description}{" "}
                 </button>
               </section>
             ))}

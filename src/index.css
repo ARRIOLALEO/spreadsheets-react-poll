@@ -163,3 +163,6 @@ span {
     max-width: 100px;
   }
 }
+.no-border {
+  border-bottom: none;
+}
