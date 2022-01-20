@@ -6,6 +6,7 @@ import QuestionsTree from "../components/questiontree/index.jsx";
 import QuestionFour from "../components/questionfour/index.jsx";
 import QuestionFive from "../components/questionfive/index.jsx";
 import SaveForm from "../components/endform/index.jsx";
+import logoup from "../images/logos/logoup.png";
 const Questions = (props) => {
   return (
     <>

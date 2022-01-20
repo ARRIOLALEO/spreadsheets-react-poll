@@ -40,3 +40,13 @@
 #question {
   transition: transform 0.5s linear;
 }
+.image-head {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+.image-button {
+  position: absolute;
+  bottom: 2rem;
+  margin-left: 30%;
+}
